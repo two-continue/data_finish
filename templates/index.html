@@ -1,0 +1,41 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>野菜、撮れてる？</title>
+    <link rel="stylesheet" href="{{url_for('static', filename='css/bootstrap.min.css')}}">
+    <link rel="stylesheet" href="{{url_for('static', filename='css/common.css')}}">
+    <link rel="stylesheet" href="{{url_for('static', filename='css/style.css')}}">
+  </head>
+  <body>
+        <div id="wrap" class="top">
+            <article id="main">
+                <div class="content">
+                    <div class="inner">
+                        <p class="sub_title">野菜×肌をAI判断アプリ</p>
+                        <div><img src="{{url_for('static', filename='img/logo.png')}}" alt=""></div>
+                        <h1 class="logo_text"><span class="b_text">野菜、撮<span class="t_small">れてる？</span></span></h1>
+                    </div>
+                    <section class="section1">
+                        <div class="inner">
+                            <h2 class="h2_tit"><span>あなたの顔の写真をアップしてください。</span></h2>
+                            <div class="img-area"><img src="{{url_for('static', filename='img/sanp.png')}}" alt="" srcset=""></div>
+                            <div class="btn1_area">
+                                <form action="img_path" method="POST">
+                                    <input type="btn" name="camera_switch" value="写真を撮る">
+                                </form>
+                            </div>
+                            <button class="up_btn">判断開始</button>
+                        </div>
+                    </section>
+                    <footer class="footer">
+                            <div class="inner"><small class="copy">&copy;1CONTINUE</small></div>
+                    </footer>
+                </div>
+            </article>
+        </div>
+  </body>
+</html>
