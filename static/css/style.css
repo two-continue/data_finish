@@ -2,17 +2,22 @@
   width: 100vw;
   height: auto;
   min-height: 100vh;
-  background-color: #3AD6B2;
-  padding: 100px 0;
+  padding: 100px 0 0;
+  background-color:#f3f3f3;
 }
 .top .content{ position: relative;}
 .sub_title{
-  font-size: 3.2rem;
+  font-size: 2.4rem;
   text-align: center;
-  color: #fff;
+}
+.sub_title span{
+  font-size: 3.2rem;
+}
+.logo_img{
+  width: 130px;
+  margin: 10px auto;
 }
 .logo_text{
-  font-family: dnp-shuei-anti-std, sans-serif;
   font-weight: bold;
   font-style: normal;
   display: flex;
@@ -22,18 +27,28 @@
   padding: 0 20px;
   font-size: 6.2rem;
   text-align: center;
-  color: #fff;
-  background-color: #29C4A0;
   display: inline-block;
   margin: auto;
 }
 .logo_text .t_small{
   font-size: 5.2rem;
 }
+.top .section1{
+  background: #3AD6B2;
+  position: relative;
+  padding: 120px 0 50px;
+}
+#svg-bg{
+  position: absolute;
+  top: 0;
+	height: 50px;
+	left: 0;
+  width: 100%;
+}
 .top .section1 .inner{
-  background: rgba(255, 255, 255, 0.5);
+  background: #fff;
+  border-radius: 24px;
   padding: 30px 20px;
-  border-radius: 5px;
 }
 .h2_tit{
   text-align: center;
@@ -46,4 +61,54 @@
   clip-path: circle(40% at 50% 50%);
   display: block;
   margin: 0 auto;
+}
+.btn1_area{
+  position: relative;
+}
+.dropzone{
+  border: 2px dashed #A4A4A4;
+  width: 80%;
+  margin: 10px auto 30px;
+  border-radius: 3px;
+  text-align: center;
+  overflow: hidden;
+}
+.dropinner {
+  padding:50px 20px;
+}
+
+.upload_img {
+  width: 35% !important;
+}
+.txt-upload{
+  font-size: 2.2rem;
+  color: #bdbdbd;
+  margin: 20px auto;
+}
+footer.footer {
+  background: #30a088;
+  text-align: center;
+  padding: 10px 0;
+  color: #fff;
+}
+.filename {
+  display: block;
+  color: #676767;
+  font-size: 14px;
+  line-height: 18px;
+}
+.upload_btn{
+  display: block;
+  color: #fff;
+  background: #3AD6B2;
+  font-size: 1.8rem;
+  width: 350px;
+  margin:10px auto;
+  padding: 10px;
+  border-radius: 30px;
+  transition: background 0.5s ease-out, opacity 0.5s ease-out, visibility 0.5s;
+}
+.upload_btn::hover{
+  background: #3AD6B2;
+  color: #fff;
 }

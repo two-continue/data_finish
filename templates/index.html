@@ -6,33 +6,45 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>野菜、撮れてる？</title>
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,700|Noto+Sans+JP:400,700" rel="stylesheet">
     <link rel="stylesheet" href="{{url_for('static', filename='css/bootstrap.min.css')}}">
     <link rel="stylesheet" href="{{url_for('static', filename='css/common.css')}}">
     <link rel="stylesheet" href="{{url_for('static', filename='css/style.css')}}">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script type=text/javascript src="{{ url_for('static', filename='js/main.js') }}"></script>
+
   </head>
   <body>
         <div id="wrap" class="top">
             <article id="main">
                 <div class="content">
                     <div class="inner">
-                        <p class="sub_title">野菜×肌をAI判断アプリ</p>
-                        <div><img src="{{url_for('static', filename='img/logo.png')}}" alt=""></div>
-                        <h1 class="logo_text"><span class="b_text">野菜、撮<span class="t_small">れてる？</span></span></h1>
+                        <p class="sub_title"><span>野菜</span>×<span>肌</span>を<span>AI判断</span>アプリ</p>
+                        <div class="logo_img"><img src="{{url_for('static', filename='img/logo.png')}}" alt=""></div>
+                        <h1 class="logo_text"><span class="b_text">野菜、撮<span class="t_small">れてる</span>?</span></h1>
                     </div>
                     <section class="section1">
                         <div class="inner">
-                            <h2 class="h2_tit"><span>あなたの顔の写真をアップしてください。</span></h2>
-                            <div class="img-area"><img src="{{url_for('static', filename='img/sanp.png')}}" alt="" srcset=""></div>
+                            <h2 class="h2_tit"><span>あなたの顔の写真をアップロードしてください。</span></h2>
                             <div class="btn1_area">
-                                <form action="img_path" method="POST">
-                                    <input type="btn" name="camera_switch" value="写真を撮る">
+                                <form action="" method="POST" enctype="multipart/form-data">
+                                    <div class="dropzone">
+                                        <div class="dropinner">
+                                            <img src="{{url_for('static', filename='img/upload.svg')}}" alt="" class="upload_img">
+                                            <p class="txt-upload">jpg/png/gif以外のファイルであげないでください。</p>
+                                            <p><input type="file" name="file" class=""></p>
+                                        </div>
+                                    </div>
+                                    <input type="submit" value="判定開始" class="btn upload_btn">
                                 </form>
                             </div>
-                            <button class="up_btn">判断開始</button>
                         </div>
+                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1500 50" preserveAspectRatio="none" id="svg-bg">
+                            <path d="M0,0 v25 q10,10 20,0 t20,0 t20,0 t20,0 t20,0 t20,0 t20,0 t20,0 t20,0 t20,0 t20,0 t20,0 t20,0 t20,0 t20,0 t20,0 t20,0 t20,0 t20,0 t20,0 t20,0 t20,0 t20,0 t20,0 t20,0 t20,0 t20,0 t20,0 t20,0 t20,0 t20,0 t20,0 t20,0 t20,0 t20,0 t20,0 t20,0 t20,0 t20,0 t20,0 t20,0 t20,0 t20,0 t20,0 t20,0 t20,0 t20,0 t20,0 t20,0 t20,0 t20,0 t20,0 t20,0 t20,0 t20,0 t20,0 t20,0 t20,0 t20,0 t20,0 t20,0 t20,0 t20,0 t20,0 t20,0 t20,0 t20,0 t20,0 t20,0 t20,0 t20,0 t20,0 t20,0 t20,0 t20,0 t20,0 t20,0 t20,0 t20,0 t20,0 v-25 Z" fill="#f3f3f3"></path>
+                        </svg>
                     </section>
                     <footer class="footer">
-                            <div class="inner"><small class="copy">&copy;1CONTINUE</small></div>
+                            <div class="inner"><small class="copy">&copy;ONE CONTINUE</small></div>
                     </footer>
                 </div>
             </article>
